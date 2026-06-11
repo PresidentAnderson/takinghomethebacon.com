@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taking Home The Bacon — Earn it. Keep it. Grow it.</title>
+  <meta name="description" content="Taking Home The Bacon — practical plays for earning more, keeping more and making money work for you." />
+  <link rel="canonical" href="https://takinghomethebacon.com" />
+  <meta property="og:title" content="Taking Home The Bacon" />
+  <meta property="og:description" content="Practical plays for earning more, keeping more and making money work for you." />
+  <meta property="og:url" content="https://takinghomethebacon.com" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root{
+      --bg:#160e0c; --bg2:#221410; --ink:#faf5f2; --muted:#bfa89e;
+      --brand:#e2543a; --brand2:#f0a04b; --accent:#ffd166;
+      --card:rgba(255,255,255,.045); --line:rgba(255,255,255,.10); --maxw:1080px;
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+    a{color:inherit;text-decoration:none}
+    h1,h2,h3{font-family:'Sora',sans-serif;line-height:1.15;letter-spacing:-.02em}
+    .glow{position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(60vw 60vw at 75% -10%, rgba(240,160,75,.18), transparent 60%),radial-gradient(50vw 50vw at 0% 100%, rgba(226,84,58,.16), transparent 55%)}
+    header{position:relative;z-index:2;padding:26px 0}
+    .nav{display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:12px;font-family:'Sora';font-weight:800;font-size:1.1rem}
+    .mark{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;font-weight:800;background:linear-gradient(135deg,var(--brand),var(--brand2));color:#160e0c;box-shadow:0 8px 24px rgba(226,84,58,.35)}
+    .nav a.cta{font-weight:600;font-size:.92rem;padding:10px 18px;border:1px solid var(--line);border-radius:999px;transition:.2s}
+    .nav a.cta:hover{background:var(--card);border-color:rgba(255,255,255,.25)}
+    .hero{position:relative;z-index:2;padding:64px 0 40px;text-align:center}
+    .pill{display:inline-flex;align-items:center;gap:8px;font-size:.8rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);border:1px solid var(--line);padding:7px 14px;border-radius:999px;margin-bottom:26px}
+    .pill .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px var(--accent)}
+    .hero h1{font-size:clamp(2.3rem,6vw,4rem);font-weight:800;margin-bottom:18px}
+    .hero h1 .grad{background:linear-gradient(90deg,var(--brand),var(--brand2) 55%,var(--accent));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+    .hero p.lead{font-size:clamp(1.05rem,2.2vw,1.3rem);color:var(--muted);max-width:640px;margin:0 auto 34px}
+    .actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+    .btn{font-weight:600;padding:14px 26px;border-radius:999px;transition:.25s;border:1px solid transparent;cursor:pointer;font-size:1rem}
+    .btn-primary{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#160e0c;box-shadow:0 12px 30px rgba(226,84,58,.3)}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 40px rgba(226,84,58,.42)}
+    .btn-ghost{border-color:var(--line);color:var(--ink)}
+    .btn-ghost:hover{background:var(--card)}
+    .features{position:relative;z-index:2;padding:60px 0}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px;backdrop-filter:blur(8px);transition:.25s}
+    .card:hover{transform:translateY(-4px);border-color:rgba(255,255,255,.22)}
+    .card .ico{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;font-size:1.3rem;margin-bottom:16px;background:linear-gradient(135deg,rgba(240,160,75,.25),rgba(255,209,102,.18));border:1px solid var(--line)}
+    .card h3{font-size:1.2rem;margin-bottom:8px}
+    .card p{color:var(--muted);font-size:.96rem}
+    .cta-band{position:relative;z-index:2;padding:30px 0 80px}
+    .panel{background:linear-gradient(135deg,rgba(226,84,58,.14),rgba(240,160,75,.10));border:1px solid var(--line);border-radius:24px;padding:46px 32px;text-align:center}
+    .panel h2{font-size:clamp(1.6rem,3.4vw,2.2rem);margin-bottom:10px}
+    .panel p{color:var(--muted);max-width:520px;margin:0 auto 26px}
+    footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:.9rem}
+    .foot{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
+    .foot a:hover{color:var(--ink)}
+    @media(max-width:760px){.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="glow"></div>
+  <header><div class="wrap nav">
+    <div class="brand"><span class="mark">B</span> Taking Home The Bacon</div>
+    <a class="cta" href="#contact">Get in touch</a>
+  </div></header>
+  <!-- ====== EDIT COPY BELOW (placeholder text — search TODO) ====== -->
+  <section class="hero"><div class="wrap">
+    <span class="pill"><span class="dot"></span> Back and rebuilding</span>
+    <h1>Earn it. Keep it. <span class="grad">Grow it.</span></h1>
+    <p class="lead">Practical plays for earning more, keeping more of it, and putting every dollar to work. No fluff — just what brings home the bacon. <!-- TODO: real one-liner --></p>
+    <div class="actions">
+      <a class="btn btn-primary" href="#contact">Get in touch</a>
+      <a class="btn btn-ghost" href="#plays">The playbook</a>
+    </div>
+  </div></section>
+  <section class="features" id="plays"><div class="wrap grid">
+    <div class="card"><div class="ico">🥓</div><h3>Earn more</h3><p>Income plays that actually move the needle — negotiation, side income, and skills that pay.</p></div>
+    <div class="card"><div class="ico">🔒</div><h3>Keep more</h3><p>Plug the leaks: taxes, fees, subscriptions and the silent costs that eat your paycheck.</p></div>
+    <div class="card"><div class="ico">📈</div><h3>Grow it</h3><p>Make money work while you sleep — simple, boring, repeatable compounding.</p></div>
+  </div></section>
+  <section class="cta-band" id="contact"><div class="wrap">
+    <div class="panel">
+      <h2>The full site is on its way.</h2>
+      <p>We're rebuilding bigger and better. Reach out to be first in line.</p>
+      <a class="btn btn-primary" href="mailto:hello@takinghomethebacon.com">hello@takinghomethebacon.com</a>
+    </div>
+  </div></section>
+  <footer><div class="wrap foot">
+    <span>© 2026 Taking Home The Bacon</span>
+    <a href="mailto:hello@takinghomethebacon.com">Contact</a>
+  </div></footer>
+</body>
+</html>
